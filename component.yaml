@@ -1,0 +1,17 @@
+platform: Common
+buildPlatform: ReactNative
+displayName: Node Dependency Report
+inputs:
+- key: "AC_PROJECT_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Node Project Path
+  description: "Specifies the project path that exists package.json file."
+outputs:
+- key: "AC_NODE_DEPENDENCY_REPORT_PATH"
+  title: "Node Dependency Report File Path"
+  helpText:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
